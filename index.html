@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elemecanic | Electricidad y Mecánica Ingenieros S.A.S.</title>
+  <meta name="description" content="Elemecanic - Soluciones en electricidad, mecánica e ingeniería para proyectos industriales y empresariales." />
+  <style>
+    :root {
+      --negro: #111111;
+      --gris-oscuro: #1f1f1f;
+      --gris: #5b5b5b;
+      --gris-claro: #f4f4f4;
+      --blanco: #ffffff;
+      --dorado: #c89b3c;
+      --naranja: #d9742a;
+      --max-width: 1100px;
+      --sombra: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--negro);
+      background: var(--blanco);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e8e8e8;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand strong {
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      color: var(--negro);
+    }
+
+    .brand span {
+      font-size: 0.82rem;
+      color: var(--gris);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a:hover {
+      color: var(--naranja);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--dorado), var(--naranja));
+      color: var(--blanco);
+      box-shadow: var(--sombra);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--negro);
+      color: var(--negro);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111111 0%, #232323 55%, #3a2b18 100%);
+      color: var(--blanco);
+      padding: 90px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: #ececec;
+      font-size: 1.08rem;
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--sombra);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 14px;
+      color: #f3c66a;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--gris);
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: var(--sombra);
+      border: 1px solid #ececec;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: var(--negro);
+    }
+
+    .about {
+      background: var(--gris-claro);
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .about-box,
+    .contact-box {
+      background: var(--blanco);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--sombra);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .project-item {
+      padding: 20px;
+      border-left: 5px solid var(--naranja);
+      background: #fffaf2;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: var(--negro);
+      color: #d8d8d8;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .highlight {
+      color: #f3c66a;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .cards,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <strong>ELEMECANIC</strong>
+        <span>Electricidad y Mecánica Ingenieros S.A.S.</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <h1>Soluciones integrales en <span class="highlight">electricidad, mecánica e ingeniería</span></h1>
+          <p>
+            En Elemecanic desarrollamos servicios y proyectos orientados a la eficiencia,
+            confiabilidad y continuidad operativa de empresas del sector industrial,
+            comercial y de infraestructura.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar información</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>¿Qué hacemos?</h3>
+          <p>Montajes eléctricos y mecánicos.</p>
+          <p>Mantenimiento preventivo y correctivo.</p>
+          <p>Apoyo técnico e ingeniería aplicada.</p>
+          <p>Atención orientada a calidad, seguridad y cumplimiento.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <h2 class="section-title">Nuestros servicios</h2>
+        <p class="section-subtitle">
+          Ofrecemos soluciones ajustadas a las necesidades operativas de cada cliente,
+          con enfoque técnico, cumplimiento y mejora continua.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Electricidad industrial</h3>
+            <p>Instalación, mantenimiento y adecuación de sistemas eléctricos para operación segura y eficiente.</p>
+          </article>
+          <article class="card">
+            <h3>Mecánica y montajes</h3>
+            <p>Apoyo en procesos de montaje, ajuste, reparación y mantenimiento de equipos y estructuras.</p>
+          </article>
+          <article class="card">
+            <h3>Ingeniería y soporte técnico</h3>
+            <p>Soluciones técnicas orientadas a productividad, continuidad operativa y confiabilidad de los procesos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="container">
+        <h2 class="section-title">Quiénes somos</h2>
+        <p class="section-subtitle">
+          Somos una empresa enfocada en brindar soluciones en electricidad, mecánica e ingeniería,
+          orientadas al desarrollo de proyectos y al soporte técnico de nuestros clientes.
+        </p>
+        <div class="about-grid">
+          <div class="about-box">
+            <h3>Misión</h3>
+            <p>
+              Prestar servicios de alta calidad en las áreas eléctrica, mecánica e ingeniería,
+              aportando valor a nuestros clientes mediante soluciones confiables, seguras y oportunas.
+            </p>
+          </div>
+          <div class="about-box">
+            <h3>Visión</h3>
+            <p>
+              Consolidarnos como una empresa reconocida por su cumplimiento, capacidad técnica
+              y compromiso con la mejora continua en cada proyecto ejecutado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="container">
+        <h2 class="section-title">Experiencia y proyectos</h2>
+        <p class="section-subtitle">
+          Esta sección puede mostrar sectores atendidos, trabajos realizados, fotografías y resultados destacados.
+        </p>
+        <div class="project-list">
+          <div class="project-item">
+            <strong>Proyecto 1</strong>
+            <p>Montaje y adecuación de soluciones eléctricas y mecánicas para operación industrial.</p>
+          </div>
+          <div class="project-item">
+            <strong>Proyecto 2</strong>
+            <p>Mantenimiento preventivo y correctivo orientado a continuidad de procesos y reducción de fallas.</p>
+          </div>
+          <div class="project-item">
+            <strong>Proyecto 3</strong>
+            <p>Apoyo en ingeniería, instalación y mejora de infraestructura técnica en campo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="contacto">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-subtitle">
+          Aquí podrás dejar los canales oficiales de atención de Elemecanic.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Información de contacto</h3>
+            <p><strong>Empresa:</strong> ELEMECANIC Electricidad y Mecánica Ingenieros S.A.S.</p>
+            <p><strong>NIT:</strong> 900.335.782-4</p>
+            <p><strong>Correo:</strong> correo@elemecanic.com</p>
+            <p><strong>Teléfono:</strong> +57 300 000 0000</p>
+            <p><strong>Ciudad:</strong> Colombia</p>
+          </div>
+          <div class="contact-box">
+            <h3>Atención comercial</h3>
+            <p>
+              Puedes reemplazar esta sección por un botón de WhatsApp,
+              un formulario de contacto o un enlace directo al correo de la empresa.
+            </p>
+            <p style="margin-top: 18px;">
+              <a class="btn btn-primary" href="mailto:correo@elemecanic.com">Escríbenos</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 ELEMECANIC Electricidad y Mecánica Ingenieros S.A.S. - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
