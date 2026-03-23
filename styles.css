@@ -94,6 +94,23 @@ nav ul {
 nav a {
   font-weight: 600;
   transition: 0.25s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--naranja);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 nav a:hover {
@@ -157,11 +174,11 @@ nav a:hover {
 }
 
 .hero-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(243, 198, 106, 0.25);
   border-radius: 20px;
   padding: 28px;
-  box-shadow: var(--sombra);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 .hero-card h3 {
@@ -342,4 +359,11 @@ footer {
 .project-card h3 {
   margin-bottom: 12px;
   color: var(--naranja);
+}
+
+.hero-note {
+  font-size: 1rem;
+  color: #f3d9a0;
+  margin-top: -8px;
+  margin-bottom: 24px;
 }
