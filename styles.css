@@ -285,40 +285,50 @@ footer {
   }
 
   .nav {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+    gap: 12px;
   }
 
   .brand {
-    align-items: center;
-    max-width: calc(100% - 80px);
+    min-width: 0;
+    max-width: 100%;
   }
 
   .brand-text {
-    line-height: 1.15;
+    line-height: 1.1;
   }
 
   .brand strong {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     letter-spacing: 1px;
   }
 
   .brand span {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
   }
 
   .logo {
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
   }
 
-  .menu-toggle {
-    display: block;
-  }
+.menu-toggle {
+  display: none;
+  border: 2px solid #444;
+  color: #222;
+  background: white;
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 1;
+}
 
   nav {
+    grid-column: 1 / -1;
     width: 100%;
     display: none;
   }
@@ -328,14 +338,22 @@ footer {
   }
 
   nav ul {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     padding: 14px 0 4px;
   }
 
+  nav li {
+    width: 100%;
+  }
+
   nav a {
+    display: block;
+    width: 100%;
     font-size: 0.98rem;
+    padding: 6px 0;
   }
 }
 
