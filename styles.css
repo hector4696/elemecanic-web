@@ -137,7 +137,13 @@ nav a:hover {
 }
 
 .btn-secondary {
-  border: 2px solid var(--negro);
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: white;
   color: var(--negro);
 }
 
@@ -405,4 +411,27 @@ footer {
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: var(--negro);
+  color: white;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.btn-top:hover {
+  transform: scale(1.1);
 }
