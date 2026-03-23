@@ -272,7 +272,8 @@ footer {
   .about-grid,
   .contact-grid,
   .why-grid,
-  .project-grid {
+  .project-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
@@ -366,4 +367,29 @@ footer {
   color: #f3d9a0;
   margin-top: -8px;
   margin-bottom: 24px;
+}
+
+.gallery-section {
+  background: #fffdf9;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-item {
+  background: var(--blanco);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid #ececec;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
 }
