@@ -7,7 +7,7 @@
   --dorado: #c89b3c;
   --naranja: #d9742a;
   --max-width: 1100px;
-  --sombra: 0 10px 25px rgba(0,0,0,0.08);
+  --sombra: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 * {
@@ -126,9 +126,9 @@ nav a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--dorado), var(--naranja));
+  background: linear-gradient(135deg, #d4a437, #ff8c2a);
   color: var(--blanco);
-  box-shadow: var(--sombra);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .btn-primary:hover {
@@ -328,8 +328,10 @@ footer {
   transition: 0.25s ease;
 }
 
-.why-card:hover {
-  transform: translateY(-4px);
+.card:hover,
+.why-card:hover,
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
 }
 
 .why-card h3 {
