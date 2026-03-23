@@ -315,18 +315,18 @@ footer {
     flex-shrink: 0;
   }
 
-.menu-toggle {
-  display: block;
-  justify-self: end;
-  border: 2px solid #444;
-  color: #222;
-  background: white;
-  font-size: 1.4rem;
-  padding: 8px 12px;
-  border-radius: 10px;
-  cursor: pointer;
-  line-height: 1;
-}
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+    border: 2px solid #444;
+    color: #222;
+    background: white;
+    font-size: 1.4rem;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 1;
+  }
 
   nav {
     grid-column: 1 / -1;
