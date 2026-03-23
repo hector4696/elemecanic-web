@@ -140,6 +140,7 @@ nav a:hover {
   border: 2px solid white;
   color: white;
   background: transparent;
+  backdrop-filter: blur(6px);
 }
 
 .btn-secondary:hover {
