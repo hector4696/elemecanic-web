@@ -593,9 +593,9 @@ footer {
 
 .menu-toggle {
   display: none;
-  background: transparent;
-  border: 2px solid var(--negro);
-  color: var(--negro);
+  border: 2px solid #444;
+  color: #222;
+  background: white;
   font-size: 1.4rem;
   padding: 6px 12px;
   border-radius: 10px;
