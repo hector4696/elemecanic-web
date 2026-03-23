@@ -285,13 +285,15 @@ footer {
   }
 
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     gap: 14px;
   }
 
   .brand {
     align-items: center;
+    max-width: calc(100% - 80px);
   }
 
   .brand-text {
@@ -312,13 +314,28 @@ footer {
     height: 46px;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
   nav ul {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
-    row-gap: 10px;
+    padding: 14px 0 4px;
   }
 
   nav a {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 }
 
@@ -572,4 +589,15 @@ footer {
 
 .btn-top:hover {
   transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--negro);
+  color: var(--negro);
+  font-size: 1.4rem;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
 }
