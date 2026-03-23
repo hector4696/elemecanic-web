@@ -56,12 +56,19 @@ header {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 
 .brand strong {
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
   color: var(--negro);
 }
 
@@ -76,6 +83,11 @@ nav ul {
   gap: 20px;
   flex-wrap: wrap;
   align-items: center;
+}
+
+nav a {
+  font-weight: 600;
+  transition: 0.25s ease;
 }
 
 nav a:hover {
@@ -107,9 +119,9 @@ nav a:hover {
 }
 
 .hero {
-  background: linear-gradient(135deg, #111111 0%, #232323 55%, #3a2b18 100%);
+  background: linear-gradient(135deg, #0f0f0f 0%, #1f1f1f 50%, #4b3217 100%);
   color: var(--blanco);
-  padding: 90px 0 80px;
+  padding: 110px 0 90px;
 }
 
 .hero-grid {
