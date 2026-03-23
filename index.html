@@ -293,5 +293,25 @@
   <a href="https://wa.me/573103222924?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Elemecanic." class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
     💬
   </a>
+
+  <script>
+  const elements = document.querySelectorAll(".fade-in");
+
+  const showOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+      const boxTop = el.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        el.classList.add("show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", showOnScroll);
+  showOnScroll();
+</script>
+
 </body>
 </html>
